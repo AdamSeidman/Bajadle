@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Seidman</title>
+    <link rel="shortcut icon" href="./dist/favicon.ico" type="image/x-icon">
+    <style>
+        h3 {
+            position: absolute;
+            margin-top: 10vh;
+            font-size: 10vh;
+            margin-left: 15vw;
+        }
+    </style>
+    <script>
+        const REDIRECT_PATHS = ['bajadle', 'game', 'game-infinite']
+        let url = window.location.href.toLowerCase()
+        url = url.slice(url.indexOf('.am') + 4).trim()
+        if (url.includes('/')) {
+             url = url.slice(0, url.indexOf('/'))
+        }
+        if (REDIRECT_PATHS.includes(url)) {
+            window.location.replace(`https://seidman-ad.am/index?pathname=${url}`)
+        } else {
+            window.location.replace('https://seidman-ad.am/')
+        }
+    </script>
+</head>
+<body>
+    <h3>Redirecting...</h3>
+</body>
+</html>
